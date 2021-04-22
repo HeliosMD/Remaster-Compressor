@@ -1,0 +1,16 @@
+HARDWARELIBRE COPYLEFT LICENSE
+
+Thanks to all those who have collaborated in making this code functional and operant.
+You know who you are!! =).
+
+Information contained herein is subject to change.
+Revisions must be issued to address of such changes and|or additions.
+
+The author entrusts that the information held in this document is accurate and reliable,
+and much care has been taken in it's preparation.
+However, no resposability, financial or otherwise, shall be accepted
+for any consecuences arising out of the use on this material.
+
+Permission is granted to anyone to use this software for any peaceful purpose,
+including industrial, military, propietary and free applications, and to alter it and
+redistribute it freely.
