@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     // Check command-line arguments
     if (argc != 2)
     {
-        printf("Usage: ./wav_header audiofile.wav\n");
+        printf("Usage: wav_header audiofile.wav\n");
         return 1;
     }
 

@@ -1,4 +1,4 @@
-REMASTER COMPRESSOR - V.0.2
+REMASTER COMPRESSOR - V.0.2.5
 By: Helios Martinez Dominguez
 Estudio Siddhi - Copyleft 2021.
 
@@ -6,6 +6,7 @@ Remaster Compressor is a single pass audio remastering tool designed to accompli
 As for now, it processes 16bit audio files using SIN-COMP curve compressor. Binaries for Linux are distributed.
 Sometimes, binaries distributed may fail to execute, in such case you need to compile the application from source.
 This is due to differences between distributions (x86/x64, etc).
+
 
 How to compile from source:
 
@@ -30,13 +31,27 @@ Example:
 	$ gcc -o sin-comp sin-comp.c -std=c99 -lm
 	$ sudo chmod 775 remaster-compressor.sh
 
+How to install (into Linux):
+
+Decompress the .zip provided in the Git-Hub website.
+Open the Terminal Emulator or Shell.
+Provide installer script with execution priviledges:
+
+	$ sudo chmod 775 install-linux.sh
+
+Execute the shell script:
+
+	$ ./install-linux.sh
+
+Automatically, all needed files will be compilated and copied into /usr/bin directory.
+
+
 How to use it:
 
 Open the Terminal Emulator or Shell (bash, zsh, etc).
-Get into the remaster-compressor/ folder or directory.
-Then execute:
+Once you have installed it, execute:
 
-$ ./remaster-compressor.sh path/audiofile.wav
+$ remaster-compressor.sh path/audiofile.wav
 
 Where "path/audiofile.wav" is the audio file to be remastered. That is pretty much it!.
 The Remaster Compressor will check on the audiofile's RMS and Peak values and provide for RMS and Peak values for the output audio file.
@@ -74,6 +89,16 @@ This is a typical screen:
 	vacio.wav-remastered.wav
 	helios@helios-CQ1115LA:~$ 
 
+From version 0.2.5, there is an extra process introduced to remaster-compressor execution, that is bulk-compressor.
+Bulk Compressor allows to remasterize a whole album with just one command, providing the directory where the audio files are.
+
+Example:
+
+	$ bulk-compressor wavs/
+
+Bulk Compressor remasterizes each .wav encountered into the directory with Remaster Compressor, providing normal output.
+
+
 How it works:
 
 Remaster Compressor works making use of four main processes, each provided as a separate executable and joined together through a script shell.
@@ -88,6 +113,7 @@ SIN-COMP is not a linear compressor, it is based on a mathematical curve (sinuso
 After this process is done, the output file is named after the original audio file with the "-remastered.wav" suffix.
 Output audio file is then measured again for it's RMS and Peak values.
 
+
 About the author:
 
 Helios Martinez Dominguez is a musician and audio engineer. Is the recording, mix and master engineer of Estudio Siddhi.
@@ -98,12 +124,12 @@ https://heliosmartinezdominguez.bandcamp.com
 https://avrvm-music.bandcamp.com
 https://bounces.bandcamp.com
 https://judaslion.bandcamp.com
+https://soundcloud.com/laspopularesmakinitas
 
-Bugs fixed:
-- Non Standard WAV Headers failed to be properly processed requiring RAW import into DAW.
 
 Known bugs:
 - Incomplete handling when input file is inexisting or filename contain spaces.
+
 
 TODO:
 - Percentage increase and progress bar while processing audio file.

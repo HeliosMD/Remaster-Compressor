@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     // Check command-line arguments
     if (argc != 2)
     {
-        printf("Usage: ./rms input.wav\n");
+        printf("Usage: peak input.wav\n");
         return 1;
     }
 
