@@ -123,16 +123,19 @@ https://helios70.bandcamp.com
 https://heliosmartinezdominguez.bandcamp.com
 https://avrvm-music.bandcamp.com
 https://bounces.bandcamp.com
-https://judaslion.bandcamp.com
-https://soundcloud.com/laspopularesmakinitas
+https://judahs-lion.bandcamp.com
+https://laspopularesmakinitas.bandcamp.com
+https://chr0.bandcamp.com
+https://arnv.bandcamp.com
 
 
 Known bugs:
-- Incomplete handling when input file is inexisting or filename contain spaces.
+- Incorrect handling when input filename contain spaces, parenthesis or is inexisting.
 
 
 TODO:
 - Percentage increase and progress bar while processing audio file.
 - Migrate remaster-compressor.sh to C language.
 - 24bit precission handling.
+- 32bit floating point files handling.
 - AIFF support.
